@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "ES2022",
+    "target": "ES2022",
+    "sourceMap": true,
+    "outDir": "./dist-esm",
+    "strict": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "useUnknownInCatchVariables": false,
+    "noUnusedLocals": true,
+    "moduleResolution": "nodenext"
+  },
+  "exclude": ["**/tests/*.*", "**/*.test.*", "**/*.spec.*", "./dist/**"],
+  "include": ["./src/"]
+}

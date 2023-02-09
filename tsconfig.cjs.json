@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "CommonJS",
+    "target": "ES2022",
+    "sourceMap": true,
+    "outDir": "./dist-cjs",
+    "strict": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "useUnknownInCatchVariables": false,
+    "noUnusedLocals": true,
+    "moduleResolution": "nodenext"
+  },
+  "exclude": ["**/tests/*.*", "**/*.test.*", "**/*.spec.*", "./dist/**"],
+  "include": ["./src/"]
+}
