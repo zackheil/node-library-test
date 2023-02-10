@@ -1,18 +1,18 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
     "module": "CommonJS",
-    "target": "ES2022",
-    "sourceMap": true,
-    "outDir": "./dist-cjs",
+    "target": "ESNext",
     "strict": true,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
     "useUnknownInCatchVariables": false,
     "noUnusedLocals": true,
-    "moduleResolution": "nodenext"
+    "moduleResolution": "nodenext",
+    "composite": true,
+    "rootDir": ".",
+    "incremental": true
   },
-  "exclude": ["**/tests/*.*", "**/*.test.*", "**/*.spec.*", "./dist/**"],
-  "include": ["./src/"]
+  "references": [
+    { "path": "./packages/module2/tsconfig.cjs.json" },
+    { "path": "./packages/module1/tsconfig.cjs.json" },
+  ],
 }

@@ -1,22 +1,22 @@
 {
-  "name": "lib-test",
+  "name": "@test/packages",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "exports": {
-    ".": {
-      "require": "./dist-cjs/index.js",
-      "import": "./dist-esm/index.mjs"
-    }
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cjs": "tsc -p tsconfig.cjs.json",
     "esm": "tsc -p tsconfig.esm.json",
-    "build:tsc": "npm run cjs && npm run esm",
-    "build:tsup": "tsup src/index.ts --format cjs,esm --dts"
+    "build": "npm run cjs && npm run esm"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/node": "^18.13.0",
+    "typescript": "^4.9.5"
+  }
 }

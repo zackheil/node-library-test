@@ -1,0 +1,17 @@
+{
+    "name": "@test/module1",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+    },
+    "keywords": [],
+    "author": "",
+    "exports": {
+        "import": "./dist-esm/index.mjs",
+        "require": "./dist-cjs/index.js"
+    },
+    "dependencies": {
+        "@test/module2": "^1.0.0"
+    }
+}
