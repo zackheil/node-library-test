@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "nodenext",
+    "composite": true,
+    "rootDir": ".",
+    "incremental": true
+  },
+  "include": ["**/src/**/*.ts"],
+  "references": [
+    { "path": "./packages/module2/tsconfig.esm.json" },
+    { "path": "./packages/module1/tsconfig.esm.json" },
+  ],
+}
